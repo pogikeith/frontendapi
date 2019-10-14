@@ -12,7 +12,7 @@ class TodoItem extends React.Component {
     }
 
     toggleDone = () => {
-      fetch(`postgres://lgdxftbbmktdxf:28c8ef1a2f9f46071c3128389f0abc571ca6182b34618e22dbc7981e4dffcc98@ec2-54-235-163-246.compute-1.amazonaws.com:5432/d5mvp4eibt3bqq/todos` , {
+      fetch(`https://sleepy-shore-88784.herokuapp.com/todo/${this.props.id}` , {
         method: "PUT" , 
         headers: { "content-type": "application/json"} ,
         body: JSON.stringify({
