@@ -14,7 +14,7 @@ class App extends React.Component {
 }
 
 componentDidMount() {
-  fetch("http://localhost:5000/todos")
+  fetch("postgres://lgdxftbbmktdxf:28c8ef1a2f9f46071c3128389f0abc571ca6182b34618e22dbc7981e4dffcc98@ec2-54-235-163-246.compute-1.amazonaws.com:5432/d5mvp4eibt3bqq")
     .then(response => response.json())
     .then(data => this.setState ({ todos: data}))
 }
@@ -39,7 +39,7 @@ handleChange = event => {
 
 addTodo = event => {
   event.preventDefault()
-  fetch("http://localhost:5000/todo" , {
+  fetch("postgres://lgdxftbbmktdxf:28c8ef1a2f9f46071c3128389f0abc571ca6182b34618e22dbc7981e4dffcc98@ec2-54-235-163-246.compute-1.amazonaws.com:5432/d5mvp4eibt3bqq" , {
     method: "POST" ,
     headers: {"content-type" : "application/json"},
     body: JSON.stringify({
@@ -57,7 +57,7 @@ addTodo = event => {
 }
 
 deleteTodo = id => {
-  fetch("http://localhost:5000/todo/$(id)`" , {
+  fetch("postgres://lgdxftbbmktdxf:28c8ef1a2f9f46071c3128389f0abc571ca6182b34618e22dbc7981e4dffcc98@ec2-54-235-163-246.compute-1.amazonaws.com:5432/d5mvp4eibt3bqq" , {
     method: "DELETE"
   }).then(
       this.setState({ 

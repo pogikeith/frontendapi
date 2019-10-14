@@ -12,7 +12,7 @@ class TodoItem extends React.Component {
     }
 
     toggleDone = () => {
-      fetch(`http://localhost:5000/todo/${this.props.id}` , {
+      fetch(`postgres://lgdxftbbmktdxf:28c8ef1a2f9f46071c3128389f0abc571ca6182b34618e22dbc7981e4dffcc98@ec2-54-235-163-246.compute-1.amazonaws.com:5432/d5mvp4eibt3bqq/todos` , {
         method: "PUT" , 
         headers: { "content-type": "application/json"} ,
         body: JSON.stringify({
